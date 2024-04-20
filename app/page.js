@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <main>
       <Header/>
-      {/* <Scroll/>
+      <Scroll/>
       <IdeaForm/>
-      <Footer/>  */}
+      <Footer/> 
     </main>
   );
 }
