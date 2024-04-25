@@ -18,6 +18,11 @@ body {
   display: none;
 }
 
+*::selection {
+  color: white;
+  background-color: black;
+}
+
 :root {
   /* fonts */
   --font-unbounded: Unbounded;

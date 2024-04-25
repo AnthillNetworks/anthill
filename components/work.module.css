@@ -1,0 +1,54 @@
+
+.mainHeader{
+    border-top: 1px solid  rgba(215, 214, 214, 1);
+    border-bottom: 1px solid  rgba(215, 214, 214, 1);
+}
+
+.Workheader{
+    border-right: 1px solid  rgba(215, 214, 214, 1);
+    border-left: 1px solid  rgba(215, 214, 214, 1);
+    margin: 0 5%;
+    font-size: 70px;
+    font-weight: 500;
+    color: rgba(127, 126, 127, 1);
+    padding: 22px 18px;
+}
+
+.maincontainer {
+    border-top: 1px solid  rgba(215, 214, 214, 1);
+    border-bottom: 1px solid  rgba(215, 214, 214, 1);
+}
+
+.workcontainer {
+    min-height: 80vh;
+    margin: 0 5%;
+    display: flex;
+}
+
+.workcontainer1{
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+.workcontainer2{
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    min-width: 30em;
+    max-width: 30em;
+}
+
+.content1,.content2{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content1 {
+    border-bottom: 1px solid  rgba(215, 214, 214, 1);
+}
+
+.content2 {
+    border-top: 1px solid  rgba(215, 214, 214, 1);
+}

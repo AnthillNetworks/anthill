@@ -37,7 +37,8 @@ function Header() {
             </div>
             </div>
         </div>
-        <div className={Styles.mainCon}>
+
+        <div className={Styles.mainCon1}>
             <div className={Styles.crtDiv}>
                 <div className={Styles.crt}>
                     <div className={`${Styles.creative} ${Styles.creative1}`}>
@@ -51,9 +52,21 @@ function Header() {
             </div>
         </div>
 
+        <div className={Styles.mainCon2}>
+            <div className={Styles.crtDiv}>
+                <div className={Styles.crt}>
+                    <div>
+                        <div className={`${Styles.creativecon1} ${Styles.creative2} ${Styles.aipart}`}></div>
+                    </div>
+                    <div className={Styles.ai}>
+                        AI.
+                    </div>
+                    <div className={`${Styles.creative} ${Styles.creativeai}`}></div>
+                </div>
+            </div>
+        </div>
 
-
-        <div className={Styles.mainCon}>
+        <div className={Styles.mainCon1}>
             <div className={Styles.crtDiv}>
                 <div className={Styles.crt}>
                     <div>
@@ -66,6 +79,7 @@ function Header() {
                 </div>
             </div>
         </div>
+
     </div>
   )
 }
