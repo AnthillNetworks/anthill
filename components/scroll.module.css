@@ -49,3 +49,28 @@
     text-align: left;
     color: rgba(150, 149, 150, 1);;
 }
+
+
+@media only screen and (max-width:600px) {
+    .eachDiv {
+        min-width: fit-content;
+    }
+    .head{
+        font-size: 18px;
+    }
+    .cont2 {
+        font-size: 12px;
+    }
+    .container{
+        padding-bottom: 2em;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .arrowImg{
+        width: 4em;
+    }
+    .header {
+        padding-right: 2em;
+    }
+}

@@ -8,33 +8,36 @@ function Header() {
     <div>
         <div className={Styles.mainCon}>
             <div className={Styles.container}>
-            <div><Image className={Styles.logo} src="/assets/logo.svg" alt='Logo' width={100} height={100}/></div>
-            <div className='flex gap-8'>
-                <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
-                    <div>
-                        <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                <div><Image className={Styles.logo} src="/assets/logo.svg" alt='Logo' width={100} height={100}/></div>
+                <div className={`flex gap-8 ${Styles.links}`}>
+                    <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
+                        <div>
+                            <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                        </div>
+                        <div className={Styles.ids}>ABOUT</div>
                     </div>
-                    <div className={Styles.ids}>ABOUT</div>
-                </div>
-                <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
-                    <div>
-                        <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                    <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
+                        <div>
+                            <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                        </div>
+                        <div className={Styles.ids}>WORKS</div>
                     </div>
-                    <div className={Styles.ids}>WORKS</div>
-                </div>
-                <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
-                    <div>
-                        <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                    <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
+                        <div>
+                            <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                        </div>
+                        <div className={Styles.ids}>SERVICES</div>
                     </div>
-                    <div className={Styles.ids}>SERVICES</div>
-                </div>
-                <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
-                    <div>
-                        <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                    <div className='flex items-center justify-center gap-2 cursor-pointer' onClick={()=>{console.log("")}}>
+                        <div>
+                            <Image className={Styles.img} src="/assets/rightarrow.svg" alt='Logo' width={100} height={100}/>
+                        </div>
+                        <div className={Styles.ids}>CONTACT</div>
                     </div>
-                    <div className={Styles.ids}>CONTACT</div>
                 </div>
             </div>
+            <div>
+                <Image className={Styles.hamburger} width={100} height={100} src="/assets/hamburger.svg" alt='Hamburger'/>
             </div>
         </div>
 

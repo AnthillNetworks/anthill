@@ -7,8 +7,8 @@ function Footer() {
     <div className={`${Styles.footer} items-center justify-around`}>
       <div className={`flex ${Styles.ans}`}>ANS</div>
       <div className={`flex flex-col gap-8 ${Styles.links}`}>
-        <div className='cursor-pointer'><pre>ABOUT  / WORKS  / SERVICES  / CONTACT </pre></div>
-        <div className='cursor-pointer'><pre>PRIVACY POLICY  / COOKIE POLICY  / FAQ  </pre></div>
+        <div className={`cursor-pointer ${Styles.link}`}><pre>ABOUT  / WORKS  / SERVICES  / CONTACT </pre></div>
+        <div className={`cursor-pointer ${Styles.link}`}><pre>PRIVACY POLICY  / COOKIE POLICY  / FAQ  </pre></div>
       </div>
       <div className={` flex flex-col gap-4 items-center justify-center ${Styles.socialMedia}`}>
         <div>FOLLOW US</div>

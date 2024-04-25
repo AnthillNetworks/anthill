@@ -115,3 +115,23 @@
     max-height: 8em;
 }
 
+.hamburger{
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+    top: 2.8%;
+    right: 10%; 
+}
+
+
+@media only screen and (max-width:800px) {
+    .links {
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}

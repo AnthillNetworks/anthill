@@ -44,7 +44,7 @@ const IdeaForm = () => {
         </h2>
         <div className="flex flex-col gap-4"> 
           <h2 className={styles.choosetit}>CHOOSE ONE</h2>
-          <div className='flex w-full items-center gap-2'>
+          <div className='flex flex-wrap w-full items-center gap-2'>
             <div  className={`${styles.options} ${activeOption === "AI SPECIALIZED SOFTWARE DEVELOPMENT" ? styles.active : ''}`}  onClick={() => handleOptionChange("AI SPECIALIZED SOFTWARE DEVELOPMENT")}>AI SPECIALIZED SOFTWARE DEVELOPMENT</div>
             <div className={`${styles.options} ${activeOption === "CUSTOM SASS PRODUCT DEVELOPMENT" ? styles.active : ''}`} onClick={() => handleOptionChange("CUSTOM SASS PRODUCT DEVELOPMENT")} > CUSTOM SASS PRODUCT DEVELOPMENT </div>
             <div className={`${styles.options} ${activeOption === "CUSTOMIZED CRM DEVELOPMENT" ? styles.active : ''}`} onClick={() => handleOptionChange("CUSTOMIZED CRM DEVELOPMENT")} > CUSTOMIZED CRM DEVELOPMENT  </div>  
