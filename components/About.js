@@ -20,7 +20,7 @@ function About() {
         </div>
         <div>
           <div className={`px-2 ${Styles.ans}`}>ANS</div>
-          <div className={`${Styles.aboutcon}`}>We're not just crafting  software solutions; We're sculpting the future  of your business with    AI-driven  innovation. Harnessing                the power of artificial intelligence and                           cutting-edge technology trends,  WE ASSURE THAT YOUR BRAND NOT     ONLY LEADS THE PACK BUT ALSO ENGAGES AND       RETAINS        YOUR        TARGET CUSTOMERS EFFECTIVELY.              OUR TEAM OF EXPERTS IS COMMITTED TO               SURPASSING EXPECTATIONS BY               DELIVERING BESPOKE SOLUTIONS THAT         HARMONIZE SEAMLESSLY WITH YOUR OVERALL PRODUCT STRATEGY.</div>
+          <div className={`${Styles.aboutcon}`}>We&apos;re not just crafting software solutions; We&apos;re sculpting the future of your business with AI-driven innovation. Harnessing the power of artificial intelligence and cutting-edge technology trends, WE ASSURE THAT YOUR BRAND NOT ONLY LEADS THE PACK BUT ALSO ENGAGES AND RETAINS YOUR TARGET CUSTOMERS EFFECTIVELY. OUR TEAM OF EXPERTS IS COMMITTED TO SURPASSING EXPECTATIONS BY DELIVERING BESPOKE SOLUTIONS THAT HARMONIZE SEAMLESSLY WITH YOUR OVERALL PRODUCT STRATEGY.</div>
         </div>
       </div>
     </div>
