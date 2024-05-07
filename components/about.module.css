@@ -110,5 +110,11 @@
     .ans{
         font-size: 36px;
     }
+    .container1 {
+        border-right: none;
+    }
+    .container3 {
+        border-left: none;
+    }
 }
 

@@ -1,17 +1,16 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import styles from './form.module.css';
+import axios from 'axios';
 
 const IdeaForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   const [activeOption, setActiveOption] = useState(null);
 
   const handleOptionChange = (value) => {
     setActiveOption(value);
-    console.log('Selected option:', value);
   };
 
   const handleNameChange = (event) => {
@@ -26,9 +25,29 @@ const IdeaForm = () => {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Implement form submission logic here
+    try {
+      const response = await fetch('api/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({name,email,message,activeOption})
+      });
+      if (response.ok) {
+          let data = await response.json()
+          setEmail("");
+          setName("");
+          setMessage("");
+          setActiveOption(null);
+          console.log('Messages sent successfully!');
+      } else {
+          console.error('Failed to send messages');
+      }
+    } catch (error) {
+        console.error('Error:', error);
+    }
   };
 
   return (
@@ -52,12 +71,30 @@ const IdeaForm = () => {
         </div>
 
         <div className='flex flex-wrap gap-8 mt-4'>
-          <input type="text" placeholder='NAME' className={styles.input}/>
-          <input type="text" placeholder='MESSAGE'className={styles.input}/>
-          <input type="email" placeholder='E-MAIL' className={styles.input}/>
+          <input 
+            type="text" 
+            placeholder='NAME' 
+            className={styles.input} 
+            value={name} 
+            onChange={handleNameChange} 
+          />
+          <input 
+            type="text" 
+            placeholder='MESSAGE' 
+            className={styles.input} 
+            value={message} 
+            onChange={handleMessageChange} 
+          />
+          <input 
+            type="email" 
+            placeholder='E-MAIL' 
+            className={styles.input} 
+            value={email} 
+            onChange={handleEmailChange} 
+          />
         </div>
 
-        <div className={styles.sendbtn}>SEND A MESSAGE</div>
+        <button type="submit" className={styles.sendbtn}>SEND A MESSAGE</button>
 
       </form>
     </div>
