@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import styles from './form.module.css';
-import axios from 'axios';
 
 const IdeaForm = () => {
   const [name, setName] = useState('');
