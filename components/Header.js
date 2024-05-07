@@ -83,6 +83,36 @@ function Header() {
             </div>
         </div>
 
+        <div className={Styles.Homemobile}>
+            <div className={Styles.eachDiv}>
+                <div className={`${Styles.creativeDiv} flex flex-col justify-between items-center`}>
+                    <div className={`${Styles.subDivs} flex items-center justify-center`}>
+                        <div className={Styles.name}>CREATIVE</div>
+                    </div>
+                    <div className={Styles.emptyDiv}></div>
+                    <div className={`${Styles.subDivs} flex items-center justify-center`}>
+                        <div className={Styles.name1}>SOLUTION</div>
+                    </div>
+                </div>
+            </div>
+            <div className={Styles.eachDivai}>
+                <div className={Styles.ai}>
+                    AI.
+                </div>
+            </div>
+            <div className={Styles.eachDiv}>
+                <div className={`${Styles.solutionDiv} flex flex-col justify-between items-center`}>
+                    <div className={`${Styles.subDivs} flex items-center justify-center`}>
+                        <div className={Styles.name1}>CREATIVE</div>
+                    </div>
+                    <div className={Styles.emptyDiv}></div>
+                    <div className={`${Styles.subDivs} flex items-center justify-center`}>
+                        <div className={Styles.name}>SOLUTION</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
   )
 }
