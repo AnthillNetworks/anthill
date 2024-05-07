@@ -146,3 +146,23 @@
         max-width: fit-content;
     }
 }
+
+@media only screen and (max-width:1200px) and (min-width:700px) {
+    .name,.name1 {
+        font-size: 4em;
+    }
+    .creative,.creative1{
+        width: 20em;
+        min-width: 20em;
+        max-width: 20em;
+    }
+    .creativecon,.creative2{
+        width: 20em;
+        min-width: 20em;
+        max-width: 20em;
+    }
+    .ai {
+        font-size: 70px;
+    }
+}
+

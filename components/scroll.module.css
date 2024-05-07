@@ -50,8 +50,8 @@
     color: rgba(150, 149, 150, 1);;
 }
 
-
-@media only screen and (max-width:600px) {
+    
+@media only screen and (max-width:800px) {
     .eachDiv {
         min-width: fit-content;
     }

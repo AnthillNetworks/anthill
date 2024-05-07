@@ -1,6 +1,6 @@
 .container {
     margin: 0 5%;
-    min-height: 100vh;
+    min-height: 150vh;
 }
 
 .about,.ans{
@@ -47,3 +47,30 @@
     border-right: 1px solid  rgba(215, 214, 214, 1);
     border-left: 1px solid  rgba(215, 214, 214, 1);
 }   
+
+.img1 {
+    width: 372px;
+    height: 530px;
+    padding: 1em;
+}
+
+.img2 {
+    width: 404px;
+    height: 482px;
+    max-width: 404px;
+    max-height: 482px;
+    padding: 1em;
+}
+
+@media only screen and (max-width:1200px) and (min-width:700px) {
+    .container1 {
+        width: 20em;
+        min-width: 20em;
+        max-width: 20em;
+    }
+    .container3 {
+        width: 20em;
+        min-width: 20em;
+        max-width: 20em;
+    }
+}

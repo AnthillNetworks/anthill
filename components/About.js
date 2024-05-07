@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './about.module.css'
-
+import Image from 'next/image';
 function About() {
   return (
     <div className={`${Styles.container} flex justify-between`}>
@@ -10,13 +10,13 @@ function About() {
           <div className={`${Styles.aboutcon}`}>ANTHILL NETWORKS IS AN INNOVATIVE ai - focused startup dedicated to developing cutting-edge SaaS products tailored for diverse industries. we  leverage artificial intelligence to create   solutions that streamline processed, enhance productivity, and drive growth for businesses worldwide.</div>
         </div>
         <div className={Styles.Img}>
-          <div></div>
+          <div><Image src="/assets/img1.svg" width={100} height={100} className={Styles.img1} alt='Img1'/></div>
         </div>
       </div>
       <div className={Styles.container2}>Personalized approach each project is a unique story. </div>
       <div className={`${Styles.container3} flex flex-col gap-4`}>
         <div className={Styles.Img}>
-          <div></div>
+          <div><Image src="/assets/img2.svg" width={100} height={100} className={Styles.img1} alt='Img1'/></div>
         </div>
         <div>
           <div className={`px-2 ${Styles.ans}`}>ANS</div>
