@@ -62,6 +62,10 @@
     padding: 1em;
 }
 
+.mobilecontainer{
+    display: none;
+}
+
 @media only screen and (max-width:1200px) and (min-width:700px) {
     .container1 {
         width: 20em;
@@ -74,3 +78,36 @@
         max-width: 20em;
     }
 }
+
+
+@media only screen and (max-width:800px) and (min-width:300px) {
+    .container  {
+        display: none;
+    }
+    .mobilecontainer {
+        display: block;
+        min-height: 0;
+        display: flex;
+    }
+    .container1,.container3{
+        gap: 5em;
+        min-height: 0;
+        min-width: 0;
+        min-width: 40vw;
+    }
+    .about{
+        font-size: 36px;
+        padding: 0 0 0 12px;
+    }
+    .aboutcon{
+        font-size: 13px;
+        padding: 1em;
+    }
+    .img1 {
+        height: fit-content;
+    }
+    .ans{
+        font-size: 36px;
+    }
+}
+
