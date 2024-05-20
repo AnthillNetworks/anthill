@@ -14,6 +14,7 @@ export default function Home() {
       <Workheader/>
       <Works/>
       <Scroll/>
+      <Workheader/>
       <IdeaForm/>
       <Footer/> 
     </main>
