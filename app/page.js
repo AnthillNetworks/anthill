@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
 import IdeaForm from "@/components/Form";
 import Header from "@/components/Header";
@@ -14,7 +15,7 @@ export default function Home() {
       <Workheader/>
       <Works/>
       <Scroll/>
-      <Workheader/>
+      <Blogs/>
       <IdeaForm/>
       <Footer/> 
     </main>
