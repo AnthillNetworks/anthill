@@ -1,3 +1,4 @@
+"use server"
 import { db } from '@/app/firebase';
 import { doc, setDoc } from "firebase/firestore"; 
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";

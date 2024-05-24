@@ -4,13 +4,13 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyByVhWWm3wTGSZlqOOX_fCgCDdRraP6Zco",
-    authDomain: "anthillnetworks-bae26.firebaseapp.com",
-    projectId: "anthillnetworks-bae26",
-    storageBucket: "anthillnetworks-bae26.appspot.com",
-    messagingSenderId: "315338940616",
-    appId: "1:315338940616:web:1c825338cf64df961e05fd",
-    measurementId: "G-1JRD8MX8R3"
+    apiKey: "AIzaSyCeMvgogv0vgb8hls-V9Hd7QyTH7AvXU8c",
+    authDomain: "anthillnetworks-dced8.firebaseapp.com",
+    projectId: "anthillnetworks-dced8",
+    storageBucket: "anthillnetworks-dced8.appspot.com",
+    messagingSenderId: "35021166961",
+    appId: "1:35021166961:web:cec01282855d5951cc3ed0",
+    measurementId: "G-RRF492HTNX"
 };
 
 const app = initializeApp(firebaseConfig);
