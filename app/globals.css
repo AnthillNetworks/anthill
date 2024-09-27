@@ -176,3 +176,7 @@ body {
   --br-19xl: 38px;
   --br-5xs: 8px;
 }
+
+*{
+  text-transform: uppercase !important;
+}

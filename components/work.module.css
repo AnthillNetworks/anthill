@@ -128,9 +128,3 @@
         /* max-width: 17em; */
     }
 }
-
-@media only screen and (max-width:800px) {
-    .workcontainer{
-        flex-direction: column;
-    }
-}

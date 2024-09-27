@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import IdeaForm from "@/components/Form";
 import Header from "@/components/Header";
 import Scroll from "@/components/Scroll";
+import AnthillNetworksInfo from "@/components/why";
 import Workheader from "@/components/Workheader";
 import Works from "@/components/Works";
 
@@ -12,9 +13,10 @@ export default function Home() {
     <main>
       <Header/>
       <About/>
+      <Scroll/>
+      <AnthillNetworksInfo/>
       <Workheader/>
       <Works/>
-      <Scroll/>
       <Blogs/>
       <IdeaForm/>
       <Footer/> 

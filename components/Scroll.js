@@ -23,13 +23,13 @@ function Scroll() {
       ];
 
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} style={{maxWidth:"90vw"}}>
       <div className={`flex items-center justify-between w-full ${Styles.header}`}>  
         <div className={Styles.title}>WHAT WE DO ?</div>
-        <div><Image src="/assets/arrow.svg" alt='Arrow' width={100} height={100} className={Styles.arrowImg}/></div>
+        <div className='pl-4'><Image src="/assets/arrow.svg" alt='Arrow' width={100} height={100} className={Styles.arrowImg}/></div>
       </div>
       <div>
-        <div className={`flex gap-4 overflow-scroll p-4`}>
+        <div className={`flex gap-4 overflow-scroll p-4`} >
         {contentArray.map((item, index) => (
             <div className={`flex gap-4 flex-col p-4 ${Styles.eachDiv}`} key={index}>
                 <div key={index} className={`flex items-start w-full justify-between ${Styles.cont1}`}>

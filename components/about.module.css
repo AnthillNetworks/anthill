@@ -3,10 +3,13 @@
     /* min-height: 150vh; */
 }
 
+.lgui
+{
+    border-bottom:1px solid rgba(215, 214, 214, 1);
+}
+
 .about,.ans{
-    font-size: 70px;
     font-weight: 500;
-    letter-spacing: 0.05em;
     color: rgba(127, 126, 127, 1);
 }
 

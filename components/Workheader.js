@@ -5,7 +5,7 @@ function Workheader() {
   return (
     <div className={Styles.mainHeader}>
         <div className={`${Styles.Workheader}`}>
-            OUR WORKS
+            OUR PROJECTS
         </div>
     </div>
   )

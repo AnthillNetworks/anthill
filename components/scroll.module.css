@@ -1,6 +1,9 @@
 .container {
     margin-left: 5%;
     padding-bottom: 4em;
+    border: 1px solid rgba(215, 214, 214, 1);
+    margin: auto;
+    padding: 0 2em;
 }
 
 .header{
