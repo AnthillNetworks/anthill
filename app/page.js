@@ -11,15 +11,15 @@ import Works from "@/components/Works";
 export default function Home() {
   return (
     <main>
-      <Header/>
-      <About/>
-      <Scroll/>
-      <AnthillNetworksInfo/>
-      <Workheader/>
-      <Works/>
-      <Blogs/>
-      <IdeaForm/>
-      <Footer/> 
+      <Header />
+      <section id="about"><About /></section>
+      <section id="works"><Scroll /></section>
+      <section id="anthill"><AnthillNetworksInfo /></section>
+      <section id="workheader"><Workheader /></section>
+      <section id="works-section"><Works /></section>
+      <section id="blogs"><Blogs /></section>
+      <section id="idea-form"><IdeaForm /></section>
+      <Footer /> 
     </main>
   );
 }

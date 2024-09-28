@@ -4,30 +4,37 @@ import Styles from './header.module.css';
 import Image from 'next/image';
 
 function Header() {
-  return (
+
+    const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      };
+
+    return (
     <div>
       <div className={Styles.mainCon}>
         <div className={`${Styles.container} items-center`}>
           <div className="hidden md:block">
-            <Image className={Styles.logo} src="/assets/logo.svg" alt="Logo" width={100} height={100} />
+            <Image className={Styles.logo} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
           </div>
           <div className="flex md:hidden">
-            <Image src="/assets/logo.svg" alt="Logo" width={160} height={160} />
+            <Image src="/assets/logo1.svg" alt="Logo" width={160} height={160} />
           </div>
           <div className={`flex gap-8 ${Styles.links}`}>
-            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => { console.log('') }}>
+            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('about')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
               <div className={Styles.ids}>ABOUT</div>
             </div>
-            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => { console.log('') }}>
+            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('works-section')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
               <div className={Styles.ids}>WORKS</div>
             </div>
-            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => { console.log('') }}>
+            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('anthill')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
               <div className={Styles.ids}>SERVICES</div>
             </div>
-            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => { console.log('') }}>
+            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('blogs')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
               <div className={Styles.ids}>CONTACT</div>
             </div>
@@ -36,7 +43,7 @@ function Header() {
             Let&#39;s Build Together
           </div>
           <div className="max-md:flex hidden">
-            <Image src="/assets/hamburger.svg" alt="Hamburger Menu" width={50} height={50} />
+            <Image src="/assets/hamburger.svg" alt="Hamburger Menu" width={40} height={40} style={{width:"1em"}} />
           </div>
         </div>
       </div>

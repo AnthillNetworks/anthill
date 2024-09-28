@@ -26,7 +26,7 @@
 }
 
 .ids {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -162,6 +162,9 @@
     .hamburger{
         display: block;
     }
+    .ids{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width:900px) and (min-width:600px) {
@@ -172,6 +175,9 @@
         width: fit-content;
         min-width: fit-content;
         max-width: fit-content;
+    }
+    .ids{
+        font-size: 12px;
     }
 }
 
@@ -214,13 +220,16 @@
         display: none;
     }
     .container{
-        padding: 0 1em !important;
+        padding: 0 1em 0 0 !important;
     }
     .Homemobile{
         display: block;
         display: flex;
     }
     .name, .name1 , .ai {
-        font-size: 25px !important;
+        font-size: 20px !important;
+    }
+    .ids{
+        font-size: 12px;
     }
 }

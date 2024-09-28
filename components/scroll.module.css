@@ -68,12 +68,15 @@
         padding-bottom: 2em;
     }
     .title {
-        font-size: 30px;
+        font-size: 20px;
     }
     .arrowImg{
         width: 4em;
     }
     .header {
         padding-right: 2em;
+    }
+    .container {
+        padding: 0em !important;
     }
 }
