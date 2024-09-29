@@ -177,6 +177,10 @@ body {
   --br-5xs: 8px;
 }
 
-*{
+*:not(.blogs){
   text-transform: uppercase !important;
+} 
+
+.blogs * :not(.blogsno){
+  text-transform: none !important;
 }

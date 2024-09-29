@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import styles from './form.module.css';
+import { createEnquiry } from '@/firebase/responses';
 
 const IdeaForm = () => {
   const [name, setName] = useState('');
@@ -26,7 +27,12 @@ const IdeaForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!name || !email || !message || !activeOption) {
+      alert('Please fill all the fields');
+      return
+    }
     try {
+      await createEnquiry({name,email,message,activeOption});
       const response = await fetch('api/', {
           method: 'POST',
           headers: {
@@ -35,7 +41,7 @@ const IdeaForm = () => {
           body: JSON.stringify({name,email,message,activeOption})
       });
       if (response.ok) {
-          let data = await response.json()
+          await response.json()
           setEmail("");
           setName("");
           setMessage("");
@@ -50,7 +56,7 @@ const IdeaForm = () => {
   };
 
   return (
-    <div className={styles.maincontainer}>
+    <div className={`${styles.maincontainer} blogs`}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <h2 className={`flex flex-col ${styles.title}`}>
           <div>
@@ -90,6 +96,7 @@ const IdeaForm = () => {
             className={styles.input} 
             value={email} 
             onChange={handleEmailChange} 
+            style={{textTransform:"none !important"}}
           />
         </div>
 

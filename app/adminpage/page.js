@@ -1,62 +1,24 @@
-"use client";
-import React, { useState, useRef } from 'react';
-import { uploadPost } from './StoreData';
-import Styles from './page.module.css';
+"use client"
+import React, { useState } from 'react';
+import Sidebar from '../../components/admin/Sidebar';
+import Blogs from '../../components/admin/Blogs';
+import Responses from '../../components/admin/Response';
 
-function AdminControl() {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [image, setImage] = useState(null);
-  const fileInputRef = useRef(null); // Use ref to manipulate file input
+function Admin() {
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (title && content && image) {
-      const res = await uploadPost(title, content, image);
-      alert("Blog Uploaded Successfully ...");
-      setTitle('');
-      setContent('');
-      setImage(null);
-      fileInputRef.current.value = ''; // Clear the file input
-    } else {
-      alert('Please fill out all fields and select an image.');
-    }
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='mt-10 flex flex-col gap-8 items-center justify-center w-full'>
-      <div className='text-3xl'>
-        Admin Control
+    <div className='w-full flex min-h-screen bg-green-50'>
+      <div className='w-1/5 min-h-screen bg-white max-md:hidden'>
+        <Sidebar activeIndex={activeIndex} onSetActiveIndex={setActiveIndex} />
       </div>
-      <div className='text-xl'>
-        Create a New Blog
-      </div>
-      <div>
-        <form onSubmit={handleSubmit} className={Styles.form}>
-          <input
-            type="text"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className={Styles.input}
-          />
-          <textarea
-            placeholder="Content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className={Styles.input}
-          />
-          <input
-            type="file"
-            onChange={(e) => setImage(e.target.files[0])}
-            ref={fileInputRef} // Attach ref to file input
-            className={Styles.input}
-          />
-          <button type="submit">Submit</button>
-        </form>
+      <div className='w-4/5 max-md:w-full min-h-screen bg-blue-50 max-h-screen overflow-scroll'>
+        {activeIndex === 0 && <Responses/>}
+        {activeIndex === 1 && <Blogs/>}
       </div>
     </div>
   );
 }
 
-export default AdminControl;
+export default Admin;

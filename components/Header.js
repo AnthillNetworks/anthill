@@ -39,7 +39,7 @@ function Header() {
               <div className={Styles.ids}>CONTACT</div>
             </div>
           </div>
-          <div className="text-black px-6 py-1 max-md:px-1 max-md:text-[10px] capitalize border border-black font-medium">
+          <div className="cursor-pointer text-black px-6 py-1 max-md:px-1 max-md:text-[10px] capitalize border border-black font-medium" onClick={() => scrollToSection('blogs')}>
             Let&#39;s Build Together
           </div>
           <div className="max-md:flex hidden">

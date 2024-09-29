@@ -14,9 +14,9 @@ export async function POST(req, res) {
     });
 
     const mailOptions = {
-      from: 'barathkumar.b2411@gmail.com',
-      to: 'barathkumar.b2411@gmail.com', 
-      subject: 'New Form Submission',
+      from: email,
+      to: 'anthillnetworks@gmail.com', 
+      subject: 'New response from AnthillNetworks Website',
       text: `
         Name: ${name}
         Email: ${email}
