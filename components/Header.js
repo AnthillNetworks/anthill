@@ -39,8 +39,11 @@ function Header() {
               <div className={Styles.ids}>CONTACT</div>
             </div>
           </div>
-          <div className="cursor-pointer text-black px-6 py-1 max-md:px-1 max-md:text-[10px] capitalize border border-black font-medium" onClick={() => scrollToSection('blogs')}>
-            Let&#39;s Build Together
+          <div>
+            <div className="cursor-pointer text-center text-black px-6 py-1 max-md:px-1 max-md:text-[10px] capitalize border border-black font-medium" onClick={() => scrollToSection('blogs')}>
+              Let&#39;s Build Together
+            </div>
+            <div className='pt-2 font-medium w-full text-center'>+91 999 451 8428</div>
           </div>
           <div className="max-md:flex hidden">
             <Image src="/assets/hamburger.svg" alt="Hamburger Menu" width={40} height={40} style={{width:"1em"}} />
