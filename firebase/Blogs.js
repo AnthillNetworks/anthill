@@ -13,6 +13,7 @@ async function createBlog(blogData) {
 }
 
 async function getBlog(id) {
+  console.log(id)
   try {
     const blogDoc = await blogsCollection.doc(id).get();
     if (blogDoc.exists) {

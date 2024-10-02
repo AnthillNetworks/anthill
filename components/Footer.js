@@ -13,9 +13,9 @@ function Footer() {
       <div className={` flex flex-col gap-4 items-center justify-center ${Styles.socialMedia}`}>
         <div>FOLLOW US</div>
         <div className='flex gap-4 items-center justify-center'>
-            <Image className={`${Styles.socioImg}`} src='assets/Fb.svg' alt='FaceBook' width={100} height={100}/>
-            <Image className={`${Styles.socioImg}`} src='assets/Twitter.svg' alt='Twitter' width={100} height={100}/>
-            <Image className={`${Styles.socioImg}`} src='assets/Insta.svg' alt='Instagram' width={100} height={100}/>
+            <Image className={`${Styles.socioImg}`} src='/assets/Fb.svg' alt='FaceBook' width={100} height={100}/>
+            <Image className={`${Styles.socioImg}`} src='/assets/Twitter.svg' alt='Twitter' width={100} height={100}/>
+            <Image className={`${Styles.socioImg}`} src='/assets/Insta.svg' alt='Instagram' width={100} height={100}/>
         </div>
       </div>
     </div>

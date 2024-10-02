@@ -70,6 +70,12 @@
     -webkit-text-stroke: 1px #000;
 }
 
+.name1_ {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+
 .creativecon, .creativecon1, .creativecon2{
     text-transform: uppercase;
     height: 16em;

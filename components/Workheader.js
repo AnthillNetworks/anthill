@@ -5,7 +5,7 @@ function WorkHeader() {
   return (
     <div className={Styles.mainHeader}>
       <div
-        className="border-x-[rgba(215, 214, 214, 1)] w-[90%] px- flex items-center justify-between mx-auto"
+        className="px-10 border-x-[rgba(215, 214, 214, 1)] w-[90%] px- flex items-center justify-between mx-auto"
         style={{
           borderRight: "1px solid rgba(215, 214, 214, 1)",
           borderLeft: "1px solid rgba(215, 214, 214, 1)",
@@ -19,7 +19,7 @@ function WorkHeader() {
           download="Projects.pdf" // This will be the name of the downloaded file
           className="px-4 py-2 border border-black cursor-pointer hover:bg-gray-200 transition duration-300"
         >
-          View More Projects
+          View Portfolio
         </a>
       </div>
     </div>

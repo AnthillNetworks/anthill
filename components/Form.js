@@ -100,7 +100,15 @@ const IdeaForm = () => {
           />
         </div>
 
-        <button type="submit" className={styles.sendbtn}>SEND A MESSAGE</button>
+        <div className='flex items-center gap-6'>
+          <button type="submit" className={styles.sendbtn}>SEND A MESSAGE</button>
+          <div className='text-[#010383] font-medium flex gap-3 items-center'>
+            <a href="tel:+919363088428" className='flex gap-3 items-center'>
+              <img src="/assets/call.svg" alt="Call Icon" className='max-md:w-[2em]'/>
+              +91 93630 88428
+            </a>
+          </div>
+        </div>
 
       </form>
     </div>
