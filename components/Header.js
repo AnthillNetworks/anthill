@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Styles from './header.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 function Header() {
 
     const router = useRouter()
+    const [open,setopen] = useState(false);
     const scrollToSection = (sectionId) => {
         document.getElementById(sectionId).scrollIntoView({
           behavior: 'smooth'
@@ -46,16 +47,42 @@ function Header() {
             </div>
           </div>
           <div className='flex items-center gap-4' width={30}>
-            <img src="/assets/call.svg" alt="" className='max-md:w-[2em] cursor-pointer' onClick={() => scrollToSection('idea-form')}/>
+            <img src="/assets/call.svg" alt="" className='hidden md:block max-md:w-[2em] cursor-pointer' onClick={() => scrollToSection('idea-form')}/>
             <div className="cursor-pointer text-center text-black px-6 py-1 max-md:px-1 max-md:text-[10px] capitalize border border-black font-medium" onClick={() => scrollToSection('idea-form')}>
               Let&#39;s Build Together
             </div>
           </div>
-          <div className="max-md:flex hidden">
+          <div className="max-md:flex hidden cursor-pointer" onClick={()=>setopen(!open)}>
+            {
+            !open ?
             <Image src="/assets/hamburger.svg" alt="Hamburger Menu" width={40} height={40} style={{width:"1em"}} />
+            : <><img src="/assets/closee.svg" alt="" className="w-[20px]"/></>
+            }
           </div>
         </div>
       </div>
+
+      {
+
+        open &&  
+        <div className={`space-y-2 py-4 max-md:block hidden transform transition-all duration-5000 ${open ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => {scrollToSection('about');setopen(false)}}>
+            <div className={Styles.ids} style={{fontSize:"20px"}}>ABOUT</div>
+          </div>
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => {scrollToSection('works-section');setopen(false)}}>
+            <div className={Styles.ids} style={{fontSize:"20px"}}>WORKS</div>
+          </div>
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => {scrollToSection('anthill');setopen(false)}}>
+            <div className={Styles.ids} style={{fontSize:"20px"}}>SERVICES</div>
+          </div>
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => {scrollToSection('blogs');setopen(false)}}>
+            <div className={Styles.ids} style={{fontSize:"20px"}}>BLOGS</div>
+          </div>
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => {scrollToSection('idea-form');setopen(false)}}>
+            <div className={Styles.ids} style={{fontSize:"20px"}}>CONTACT</div>
+          </div>
+        </div>
+      }
 
       <div className={Styles.mainCon1}>
         <div className={Styles.crtDiv}>
@@ -65,7 +92,7 @@ function Header() {
               <div className={Styles.name1}>VISION</div>
             </div>
             <div>
-              <div className={Styles.creativecon}>Your Trusted Partner in Turning Visionary Ideas into Reality</div>
+              <div className={`${Styles.creativecon} uppercase`}>Your Trusted Partner in Turning Visionary Ideas into Reality</div>
             </div>
           </div>
         </div>
@@ -77,7 +104,7 @@ function Header() {
             <div>
               <div className={`${Styles.creativecon1} ${Styles.creative2} ${Styles.aipart}`}></div>
             </div>
-            <div className={`${Styles.ai} text-xl font-medium`}>TRANSFORMING IDEAS INTO DIGITAL SUCCESS</div>
+            <div className={`${Styles.ai} text-xl font-medium uppercase`}>TRANSFORMING IDEAS INTO DIGITAL SUCCESS</div>
             <div className={`${Styles.creative} ${Styles.creativeai}`}></div>
           </div>
         </div>
@@ -106,7 +133,7 @@ function Header() {
               <div className={Styles.name}>YOUR</div>
               <div className={Styles.name1}>VISION</div>
             </div>
-            <div className="max-md:text-[12px] text-[var(--color-navy)] font-medium pb-4 px-2">
+            <div className="max-md:text-[12px] text-[var(--color-navy)] font-medium pb-4 px-2 uppercase">
               We provide comprehensive SaaS solutions from concept to launch
             </div>
           </div>
@@ -114,7 +141,7 @@ function Header() {
             TRANSFORMING IDEAS INTO DIGITAL SUCCESS
           </div>
           <div className="min-w-[35%] max-w-[35%] max-md:min-h-[20em] min-h-[25em] flex flex-col items-start justify-between border border-l-gray-400">
-            <div className="max-md:text-[12px] text-[var(--color-navy)] border-b border-b-gray-400 w-full font-medium h-[50%] px-4">
+            <div className="max-md:text-[12px] uppercase text-[var(--color-navy)] border-b border-b-gray-400 w-full font-medium h-[50%] px-4">
               Your Trusted Partner in Turning Visionary Ideas into Reality
             </div>
             <div style={{ fontSize: '25px !important' }} className="pb-4 pl-2">

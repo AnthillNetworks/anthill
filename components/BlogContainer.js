@@ -9,7 +9,7 @@ function BlogContainer({ blog }) {
   };
 
   return (
-    <div className="blogs cursor-pointer w-[40%] max-md:min-w-[20em] min-w-[24em] max-md:w-[100%]" onClick={handleNavigate}>
+    <div className="blogs cursor-pointer w-[40%] max-md:min-w-[18em] min-w-[24em] max-md:w-[100%]" onClick={handleNavigate}>
       <div className='flex items-center justify-center w-full pb-4'>
        <img src={blog.blogImage} alt="" className='min-h-[20em] max-h-[20em] object-cover w-full rounded-md'/>
       </div>

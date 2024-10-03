@@ -16,12 +16,11 @@ function Footer() {
           <a href="https://www.instagram.com/anthill_networks?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
             <Image className={`${Styles.socioImg}`} src='/assets/Insta.svg' alt='Instagram' width={100} height={100}/>
           </a>
-          <a href="https://www.linkedin.com/company/anthil-networks/?viewAsMember=true">
-            {/* LinkedIn Icon */}
-            {/* <FontAwesomeIcon icon="fa-brands fa-linkedin-in" style={{color: "#ffffff",}} /> */}
-          </a>
             <Image className={`${Styles.socioImg}`} src='/assets/Fb.svg' alt='FaceBook' width={100} height={100}/>
             <Image className={`${Styles.socioImg}`} src='/assets/Twitter.svg' alt='Twitter' width={100} height={100}/>
+          <a href="https://www.linkedin.com/company/anthil-networks/?viewAsMember=true">
+            <Image className={`${Styles.socioImg}`} src='/assets/linkedin.svg' alt='LinkedIn' width={100} height={100}/>
+          </a>
         </div>
       </div>
     </div>

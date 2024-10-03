@@ -177,13 +177,13 @@ body {
   --br-5xs: 8px;
 }
 
-*:not(.blogs){
+/* *:not(.blogs){
   text-transform: uppercase !important;
 } 
 
 .blogs * :not(.blogsno){
   text-transform: none !important;
-}
+} */
 
 .loader {
   border: 4px solid #f3f3f3;
@@ -197,4 +197,15 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.menu {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.menu-open {
+  transform: translateY(0);
+  opacity: 1;
 }
