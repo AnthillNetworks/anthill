@@ -21,6 +21,10 @@ function AllBlogs() {
     }
   };
 
+  const scrollToSection = (sectionId) => {
+    router.push(`/#${sectionId}`);
+  };
+
   useEffect(() => {
     fetchBlogs();
   }, []);
@@ -30,11 +34,11 @@ function AllBlogs() {
         {/* Header */}
         <div className={Styles.mainCon}>
             <div className={`${Styles.container} items-center`}>
-            <div className="hidden md:block">
-                <Image className={Styles.logo} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
+            <div className="hidden md:block cursor-pointer">
+                <Image className={Styles.logo} onClick={()=>router.push('/')} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
             </div>
-            <div className="flex md:hidden">
-                <Image src="/assets/logo1.svg" alt="Logo" width={160} height={160} />
+            <div className="flex md:hidden cursor-pointer">
+                <Image src="/assets/logo1.svg" onClick={()=>router.push('/')} alt="Logo" width={160} height={160} />
             </div>
             <div className={`flex gap-8 ${Styles.links}`}>
                 <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('about')}>
@@ -49,7 +53,7 @@ function AllBlogs() {
                 <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
                 <div className={Styles.ids}>SERVICES</div>
                 </div>
-                <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('blogs')}>
+                <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('idea-form')}>
                 <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
                 <div className={Styles.ids}>CONTACT</div>
                 </div>

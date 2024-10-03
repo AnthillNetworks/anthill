@@ -6,8 +6,10 @@ import React, { useEffect, useState } from 'react';
 import Styles from '../../../components/header.module.css';
 import Image from 'next/image';
 import Form from '@/components/Form';
+import { useRouter } from 'next/navigation';
 
 function BlogPage({ params }) {
+  const router = useRouter()
   const [blog, setBlog] = useState({});
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true); // Loader state
@@ -34,6 +36,10 @@ function BlogPage({ params }) {
     }
   };
 
+  const scrollToSection = (sectionId) => {
+    router.push(`/#${sectionId}`);
+  };
+
   useEffect(() => {
     fetchBlogs();
     fetchAllBlogs();
@@ -56,14 +62,29 @@ function BlogPage({ params }) {
       {/* Header */}
       <div className={Styles.mainCon}>
         <div className={`${Styles.container} items-center`}>
-          <div className="hidden md:block">
-            <Image className={Styles.logo} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
+          <div className="hidden md:block cursor-pointer">
+            <Image className={Styles.logo} onClick={()=>router.push('/')} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
           </div>
-          <div className="flex md:hidden">
-            <Image src="/assets/logo1.svg" alt="Logo" width={160} height={160} />
+          <div className="flex md:hidden cursor-pointer">
+            <Image src="/assets/logo1.svg" onClick={()=>router.push('/')} alt="Logo" width={160} height={160} />
           </div>
           <div className={`flex gap-8 ${Styles.links}`}>
-            {/* Add your navigation links here */}
+          <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('about')}>
+                <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
+                <div className={Styles.ids}>ABOUT</div>
+                </div>
+                <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('works-section')}>
+                <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
+                <div className={Styles.ids}>WORKS</div>
+                </div>
+                <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('anthill')}>
+                <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
+                <div className={Styles.ids}>SERVICES</div>
+                </div>
+                <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('idea-form')}>
+                <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
+                <div className={Styles.ids}>CONTACT</div>
+                </div>
           </div>
           <div className='flex items-center gap-4' width={30}>
             <img src="/assets/call.svg"  alt="" className='max-md:w-[2em] cursor-pointer' onClick={() => scrollToSection('idea-form')}/>

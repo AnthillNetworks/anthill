@@ -2,9 +2,11 @@
 import React from 'react';
 import Styles from './header.module.css';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 function Header() {
 
+    const router = useRouter()
     const scrollToSection = (sectionId) => {
         document.getElementById(sectionId).scrollIntoView({
           behavior: 'smooth'
@@ -15,11 +17,11 @@ function Header() {
     <div>
       <div className={Styles.mainCon}>
         <div className={`${Styles.container} items-center`}>
-          <div className="hidden md:block">
-            <Image className={Styles.logo} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
+          <div className="hidden md:block cursor-pointer">
+            <Image className={`${Styles.logo} cursor-pointer`} onClick={()=>router.push('/')} src="/assets/logo1.svg" alt="Logo" width={100} height={100} />
           </div>
-          <div className="flex md:hidden">
-            <Image src="/assets/logo1.svg" alt="Logo" width={160} height={160} />
+          <div className="flex md:hidden cursor-pointer">
+            <Image className={`cursor-pointer`} onClick={()=>router.push('/')} src="/assets/logo1.svg" alt="Logo" width={160} height={160} />
           </div>
           <div className={`flex gap-8 ${Styles.links}`}>
             <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('about')}>
@@ -33,6 +35,10 @@ function Header() {
             <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('anthill')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
               <div className={Styles.ids}>SERVICES</div>
+            </div>
+            <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('blogs')}>
+              <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>
+              <div className={Styles.ids}>BLOGS</div>
             </div>
             <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={() => scrollToSection('idea-form')}>
               <div>{/* <Image className={Styles.img} src="/assets/rightarrow.svg" alt="Logo" width={100} height={100} /> */}</div>

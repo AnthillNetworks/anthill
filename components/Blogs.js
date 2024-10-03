@@ -34,10 +34,10 @@ function Blogs() {
           View More Blogs
         </div>
       </div>
-      <div className='flex items-center gap-10 justify-between w-[90%] mx-auto px-24 py-10 max-md:px-10 flex-wrap'
+      <div className='flex items-center gap-10 justify-between w-[90%] mx-auto px-24 py-10 max-md:px-10 overflow-scroll'
            style={{borderTop: "1px solid rgba(215, 214, 214, 1)",borderRight: "1px solid rgba(215, 214, 214, 1)",borderLeft: "1px solid rgba(215, 214, 214, 1)",}}
       >
-        {blogs.slice(0,4).map((blog, index) => (
+        {blogs.map((blog, index) => (
           <BlogContainer key={index} blog={blog} />
         ))}
       </div>
