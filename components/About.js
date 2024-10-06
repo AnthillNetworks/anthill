@@ -8,7 +8,7 @@ function About() {
       <div className={`${Styles.container} flex justify-end`}>
         <div className={`${Styles.container1} flex flex-col gap-4`}>
           <div>
-            <div className={`px-2 ${Styles.about} mt-4 text-6xl max-md:text-2xl`}>WHO WE ARE</div>
+            <div className={`px-2 ${Styles.about} mt-4 text-6xl max-md:text-2xl League`}>WHO WE ARE</div>
             <div className={`${Styles.aboutcon} capitalize`}>
               At Anthill Networks, we specialize in{' '}
               <span className='bg-[rgba(150,149,150,40%)]'>

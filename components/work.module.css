@@ -91,8 +91,8 @@
 @media only screen and (max-width:800px) and (min-width:350px) {
 
     .Workheader {
-        font-size: 18px;
-        padding: 2em 0 !important; 
+        font-size: 27px;
+        padding: 1em 0 !important; 
     }
     .maincontainer{
         gap: 4em;

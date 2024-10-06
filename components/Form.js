@@ -100,7 +100,7 @@ const IdeaForm = () => {
           />
         </div>
 
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-6 max-md:flex-col max-md:items-start'>
           <button type="submit" className={styles.sendbtn}>SEND A MESSAGE</button>
           <div className='text-[#010383] font-medium flex gap-3 items-center'>
             <a href="tel:+919363088428" className='flex gap-3 items-center max-md:text-sm'>

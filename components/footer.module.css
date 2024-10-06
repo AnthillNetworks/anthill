@@ -39,7 +39,7 @@
 
 @media only screen and (max-width:600px) {
     .link {
-        font-size: 15px;
+        font-size: 12px;
     }
     .footer {
         flex-direction: column;

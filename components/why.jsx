@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InfoCard = ({ imageSrc, title, description }) => (
-  <div className="flex items-start text-start gap-8 p-4 w-[50%] max-md:items-center justify-between max-md:gap-4 max-lg:w-[100%]">
+  <div className="flex items-start text-start gap-8 p-4 w-[50%] max-md:items-center max-md:gap-4 max-lg:w-[100%]">
     <div className="min-w-[7em] min-h-[7em] mb-4 flex items-center max-md:max-w[3em] max-md:min-w-[3em] justify-center">
       <img src={imageSrc} alt={title} className=" object-contain" />
     </div>

@@ -135,12 +135,12 @@ function BlogPage({ params }) {
           <div className='blogs items-center gap-10 justify-between w-[90%] mx-auto px-24 py-10 max-md:px-10 flex-wrap' style={{ borderTop: "1px solid rgba(215, 214, 214, 1)", borderRight: "1px solid rgba(215, 214, 214, 1)", borderLeft: "1px solid rgba(215, 214, 214, 1)" }}>
             <div><img src={blog.blogImage} alt="Blog Image" className='w-full max-h-[24em] object-center' /></div>
             <div className='blogs text-3xl font-semibold pt-6' style={{ textTransform: "capitalize !important" }}>{blog.blogName}</div>
-            <div className='w-full flex items-center justify-between'>
+            <div className='w-full flex items-center justify-between max-md:flex-col max-md:items-start gap-3 py-2'>
               <div className='flex gap-6 items-center'>
                 <div className=' text-lg'>{blog.writerName}</div>
                 <div className='text-neutral-500 text-sm'>{blog.publishDate || 'Unknown Date'}</div>
               </div>
-              <div className='flex gap-2 cursor-pointer' onClick={handleShare}>
+              <div className='flex gap-2 cursor-pointer items-center' onClick={handleShare}>
                 <img src="/assets/share.svg" alt="Share Icon" />
                 <div>Share</div>
               </div>

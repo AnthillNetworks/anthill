@@ -27,10 +27,10 @@ function Blogs() {
     <div className={Styles.mainHeader}>
       <div className={`${Styles.Workheader} flex items-center justify-between max-md:text-1xl`}
       >
-        <div className='text-[70px] max-md:text-xl uppercase'>
+        <div className='text-[70px] max-md:text-3xl uppercase League'>
           Blogs
         </div> 
-        <div onClick={()=>{router.push('/blogs')}} className="px-4 py-2 border border-black cursor-pointer hover:bg-gray-200 transition duration-300">
+        <div onClick={()=>{router.push('/blogs')}} className="max-md:text-[12px] px-4 py-2 border border-black cursor-pointer hover:bg-gray-200 transition duration-300">
           View More Blogs
         </div>
       </div>

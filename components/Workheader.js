@@ -11,7 +11,7 @@ function WorkHeader() {
           borderLeft: "1px solid rgba(215, 214, 214, 1)",
         }}
       >
-        <div className={Styles.Workheader}>
+        <div className={`${Styles.Workheader} League`}>
           OUR PROJECTS
         </div>
         <a
