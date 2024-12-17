@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Styles from './header.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import TransformUI from './UI';
 
 function Header() {
 
@@ -15,7 +16,7 @@ function Header() {
       };
 
     return (
-    <div>
+    <div className='hero-section'>
       <div className={Styles.mainCon}>
         <div className={`${Styles.container} items-center`}>
           <div className="hidden md:block cursor-pointer">
@@ -84,7 +85,7 @@ function Header() {
         </div>
       }
 
-      <div className={Styles.mainCon1}>
+      {/* <div className={Styles.mainCon1}>
         <div className={Styles.crtDiv}>
           <div className={Styles.crt}>
             <div className={`${Styles.creative} ${Styles.creative1}`} style={{ alignSelf: 'start', alignItems: 'start' }}>
@@ -124,9 +125,13 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={Styles.Homemobile}>
+        <TransformUI />
+      </div>
+
+      {/* <div className={Styles.Homemobile}>
         <div className="flex justify-between gap-2 border border-x-gray-400">
           <div className="min-w-[33%] max-w-[33%] max-md:min-h-[20em] min-h-[25em] flex flex-col items-start justify-between border border-r-gray-400">
             <div className="h-[50%] px-4 border-b border-b-gray-400 w-full" style={{ fontSize: '24px' }}>
@@ -150,7 +155,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -177,6 +177,22 @@ body {
   --br-5xs: 8px;
 }
 
+.hero-section {
+  background-image: url("../public/assets/hero.svg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
+  overflow: hidden;
+}
+
+@media only screen and  (max-width: 800px) {
+  .hero-section {
+    background-image: none;
+    max-height: 80vh;
+  }
+}
+
 /* *:not(.blogs){
   text-transform: uppercase !important;
 } 
